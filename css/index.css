@@ -1,0 +1,101 @@
+/* RESET DE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* STYLES DU MENU */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+
+}
+
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ff5733;
+}
+
+/* STYLES DU CAMEMBERT */
+.pie-chart {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    margin: 50px auto;
+    background: conic-gradient(#ff5733 0% 25%,
+            /* Rouge */
+            #33ff57 25% 50%,
+            /* Vert */
+            #3357ff 50% 75%,
+            /* Bleu */
+            #f39c12 75% 100%
+            /* Jaune */
+        );
+    transition: transform 5s;
+    /* Effet de transition pour tourner */
+}
+
+/* Effet de rotation du camembert au survol */
+.pie-chart:hover {
+    transform: rotate(360deg);
+    /* Tourner à 360° lorsque la souris passe dessus */
+}
+
+/* STYLES DES PARTS */
+.slice {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+   
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    transform-origin: 100% 100%;
+}
+
+.slice-1 {
+    background-color: #ff5733;
+    transform: rotate(0deg);
+}
+
+.slice-2 {
+    background-color: #33ff57;
+    transform: rotate(90deg);
+}
+
+.slice-3 {
+    background-color: #3357ff;
+    transform: rotate(180deg);
+}
+
+.slice-4 {
+    background-color: #f39c12;
+    transform: rotate(270deg);
+}
